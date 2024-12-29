@@ -1,0 +1,13 @@
+.container {
+  padding: 20px;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.list {
+  margin-top: 20px;
+}
