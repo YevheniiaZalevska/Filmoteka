@@ -12,6 +12,7 @@ const MovieList = ({ movies }) => {
   );
 };
 
+
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
