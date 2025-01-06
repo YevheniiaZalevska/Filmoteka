@@ -1,13 +1,22 @@
+
 .container {
+  margin: 0 auto;
   padding: 20px;
+  background-color: #b07d3a;
 }
 
-.heading {
-  margin-bottom: 20px;
-  font-size: 32px;
-  font-weight: bold;
+.title {
+  font-size: 2.5rem;
+  margin-top: 0px;
+  text-align: center;
+  color: #16173a;
+  font-size: 25px;
 }
 
-.list {
-  margin-top: 20px;
+@media screen and (max-width: 600px) {
+  .title {
+    text-align: left;
+  }
 }
+
+
