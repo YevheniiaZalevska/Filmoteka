@@ -5,6 +5,7 @@ import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
 import MovieCast from './components/MovieCast/MovieCast';
 import MovieReviews from './components/MovieReviews/MovieReviews';
 import Navigation from './components/Navigation/Navigation';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="cast" element={<MovieCast />} />
           <Route path="reviews" element={<MovieReviews />} />
         </Route>
-        <Route path="*" element={<p>Not Found</p>} />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </>
   );
