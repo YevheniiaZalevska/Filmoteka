@@ -1,8 +1,17 @@
-.reviewsContainer {
+.container_mr {
     padding: 20px;
+    color: #333;
 }
 
-.reviewsList {
+.title_mr {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #16173a;
+    display: flex;
+    justify-content: center;
+}
+
+.reviewList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -10,18 +19,42 @@
 
 .reviewItem {
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #b07d3a;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviewItem p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .reviewAuthor {
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #16173a;
 }
 
-.reviewContent {
-    font-size: 14px;
-    line-height: 1.5;
+.noReviews {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.toggleButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #16173a;
+    background-color: transparent;
+    border: 1px solid #16173a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggleButton:hover {
+    color: #fff;
+    border: 1px solid white; 
 }

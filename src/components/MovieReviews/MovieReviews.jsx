@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/api';
+import styles from './MovieReviews.module.css';
 
 const MovieReviews = () => {
   const { movieId } = useParams();
@@ -19,19 +20,40 @@ const MovieReviews = () => {
     getMovieReviews();
   }, [movieId]);
 
+  const [expandedReview, setExpandedReview] = useState(null);
+
+  const toggleReview = (id) => {
+    setExpandedReview((prev) => (prev === id ? null : id));
+  };
+
   return (
-    <div>
-      <h3>Reviews</h3>
+    <div className={styles.container_mr}>
+      <h3 className={styles.title_mr}>Reviews</h3>
       {reviews.length > 0 ? (
-        <ul>
-          {reviews.map((review) => (
-            <li key={review.id}>
-              <p><b>{review.author}</b>: {review.content}</p>
-            </li>
-          ))}
+        <ul className={styles.reviewList}>
+          {reviews.map((review) => {
+            const isExpanded = expandedReview === review.id;
+            const preview = review.content.slice(0, 150); // Показываем первые 150 символов
+            const fullContent = review.content;
+
+            return (
+              <li key={review.id} className={styles.reviewItem}>
+                <p>
+                  <span className={styles.reviewAuthor}>{review.author}</span>:{" "}
+                  {isExpanded ? fullContent : `${preview}...`}
+                </p>
+                <button
+                  onClick={() => toggleReview(review.id)}
+                  className={styles.toggleButton}
+                >
+                  {isExpanded ? "Collapse" : "Read More"}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       ) : (
-        <p>No reviews found.</p>
+        <p className={styles.noReviews}>No reviews found.</p>
       )}
     </div>
   );
