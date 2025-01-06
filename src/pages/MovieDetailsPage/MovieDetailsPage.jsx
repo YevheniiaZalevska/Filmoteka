@@ -8,6 +8,9 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
 
+
+  
+
   useEffect(() => {
     const getMovieDetails = async () => {
       try {
@@ -26,14 +29,14 @@ const MovieDetailsPage = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => navigate(-1)}>Go back</button>
+      <div className={styles.container}>
+      <button onClick={() => navigate(-1)} className={styles.but_mdp}>Go back</button>
       <div className={styles.details}>
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='img_mdp' />
         <div>
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
-          <p>Rating: {movie.vote_average}</p>
+          <h2 className='h2_mdp'>{movie.title}</h2>
+          <p className='p_mdp'>{movie.overview}</p>
+          <p className='p2_mdp'>Rating: {movie.vote_average}</p>
           <Link to="cast">Cast</Link> | <Link to="reviews">Reviews</Link>
         </div>
       </div>
