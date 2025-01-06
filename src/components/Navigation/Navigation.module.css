@@ -1,22 +1,24 @@
 .nav {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 20px;
-    padding: 10px 20px;
-    background-color: #fefefe;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #202020;
+    font-size: larger;
+    padding: 10px;
+    background-color: #d8a869;
 }
 
 .link {
     text-decoration: none;
-    color: rgb(14, 14, 14);
+    color: #16173a;
     transition: background-color 0.3s;
 }
 
 .link:hover {
-    background-color: #e8e4e4;
+    color: #fefefe;
 }
 
 .active {
-    color: #767676;
+    color: #ffffff;
 }
+
