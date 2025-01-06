@@ -9,7 +9,7 @@ const MovieListItem = ({ movie }) => {
     : 'https://via.placeholder.com/500x750?text=No+Image';
 
   return (
-    <li className={styles.item}>
+    <li className={styles.listItem}>
       <Link to={`/movies/${id}`}>
         <img
           src={posterUrl}
@@ -18,7 +18,7 @@ const MovieListItem = ({ movie }) => {
         />
         <p className={styles.title}>{title}</p>
       </Link>
-    </li>
+      </li>
   );
 };
 
