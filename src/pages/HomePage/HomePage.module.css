@@ -1,22 +1,90 @@
+body {
+  background-color: #b07d3a;
+  color: #16173a;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 .container {
   margin: 0 auto;
   padding: 20px;
-  background-color: #b07d3a;
+  flex-wrap: wrap;
 }
 
 .title {
   font-size: 2.5rem;
   margin-top: 0px;
   text-align: center;
+  font-size: 30px;
+}
+
+
+.randomButton {
+  padding: 5px 10px;
+  font-size: 0.9rem;
   color: #16173a;
-  font-size: 25px;
+  background-color: transparent;
+  border: 1px solid #16173a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
-@media screen and (max-width: 600px) {
-  .title {
-    text-align: left;
-  }
+.randomButton:hover {
+  color: #fff;
+  border: 1px solid white;
 }
 
+.randomMovie {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
+.randomMovie img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.randomMovie h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.randomMovie p {
+  font-size: 1rem;
+}
+
+.movieLink {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #16173a;
+  background-color: transparent;
+  border: 1px solid #16173a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.movieLink:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.genreSelector {
+  margin: 1rem 0;
+}
+
+.genreSelector select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
