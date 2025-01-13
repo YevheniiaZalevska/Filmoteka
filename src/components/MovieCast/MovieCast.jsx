@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCast } from '../../services/api';
+import { fetchMovieCast } from '../../services/api_tmdb';
 import styles from './MovieCast.module.css';
 
 const MovieCast = () => {
@@ -21,7 +21,7 @@ const MovieCast = () => {
   }, [movieId]);
 
   return (
-    <div className={styles.container_mc}>
+    <div id="cast-section" className={styles.container_mc}>
       <h3 className={styles.title_mc}>Cast</h3>
       <ul className={styles.castList}>
         {cast.map((actor) => (
