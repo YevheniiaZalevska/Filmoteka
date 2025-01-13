@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { fetchMoviesByQuery } from '../../services/api';
+import { fetchMoviesByQuery } from '../../services/api_tmdb';
 import MovieList from '../../components/MovieList/MovieList';
 import styles from './MoviesPage.module.css';
 
