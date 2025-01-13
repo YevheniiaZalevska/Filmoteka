@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieReviews } from '../../services/api';
+import { fetchMovieReviews } from '../../services/api_tmdb';
 import styles from './MovieReviews.module.css';
 
 const MovieReviews = () => {
@@ -27,7 +27,7 @@ const MovieReviews = () => {
   };
 
   return (
-    <div className={styles.container_mr}>
+    <div id="reviews-section" className={styles.container_mr}>
       <h3 className={styles.title_mr}>Reviews</h3>
       {reviews.length > 0 ? (
         <ul className={styles.reviewList}>
