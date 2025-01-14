@@ -26,14 +26,7 @@ const MovieDetailsPage = () => {
   }
 
  return (
-    <div
-      className={styles.container}
-      style={{
-        backgroundImage: movie.backdrop_path
-          ? `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
-          : 'none',
-      }}
-    >
+    <div className={styles.container}>
       <div className={styles.overlay}></div>
       <button onClick={() => navigate(-1)} className={styles.but_mdp}>
         Go back
