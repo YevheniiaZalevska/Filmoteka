@@ -5,24 +5,24 @@ import styles from './HomePage.module.css';
 import UpcomingMoviesSlider from '../../components/UpcomingMoviesSlider/UpcomingMoviesSlider';
 
 const HomePage = () => {
-  const [movies, setMovies] = useState([]);
-  const [genres, setGenres] = useState([]);
+  const [movies, setMovies] = useState([]); 
+  const [genres, setGenres] = useState([]); 
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState(null); 
 
   // Загрузка фильмов и жанров
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [moviesData, genresData] = await Promise.all([
-          fetchTrendingMovies(),
-          fetchGenres(),
+          fetchTrendingMovies(), 
+          fetchGenres(), 
         ]);
-        setMovies(moviesData.results);
+        setMovies(moviesData.results); 
         setFilteredMovies(moviesData.results); 
-        setGenres(genresData);
+        setGenres(genresData); 
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error); 
       }
     };
 
@@ -33,9 +33,9 @@ const HomePage = () => {
   const handleGenreChange = (genreId) => {
     setSelectedGenre(genreId);
     if (!genreId) {
-      setFilteredMovies(movies);
+      setFilteredMovies(movies); 
     } else {
-      const filtered = movies.filter((movie) => movie.genre_ids.includes(genreId));
+      const filtered = movies.filter((movie) => movie.genre_ids.includes(genreId)); 
       setFilteredMovies(filtered);
     }
   };
@@ -44,7 +44,7 @@ const HomePage = () => {
     <div className={styles.container}>
       <UpcomingMoviesSlider />
       <h1 className={styles.title}>Trending Today</h1>
-        <div className={styles.genre_selector}>
+      <div className={styles.genre_selector}>
         <label className={styles.genre_text} htmlFor="genres">Filter by Genre:</label>
         <select
           className={styles.genre_form}
@@ -60,8 +60,11 @@ const HomePage = () => {
           ))}
         </select>
       </div>
-
-      <MovieList movies={filteredMovies} className={styles.movieList} />
+      {filteredMovies.length > 0 ? (
+        <MovieList movies={filteredMovies} className={styles.movieList} />
+      ) : (
+        <p className={styles.noMoviesText}>Sorry, there are no movies matching this request.</p>
+      )}
     </div>
   );
 };
