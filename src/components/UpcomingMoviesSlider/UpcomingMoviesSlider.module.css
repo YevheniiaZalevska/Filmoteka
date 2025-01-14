@@ -1,0 +1,103 @@
+.sliderContainer {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 650px) {
+    .sliderContainer {
+        margin-bottom: 20px;
+    }
+}
+
+.sliderItem {
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sliderImage {
+    width: calc(100% - 10px);
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sliderImage:hover {
+    transform: scale(1.1);
+}
+
+.slider_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 650px) {
+    .slider_title {
+        font-size: 23px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: #b07d3a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 70%;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modalImage {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .modalImage {
+        width: 100px;
+    }
+}
+
+.detailsButton {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #16173a;
+    background-color: transparent;
+    border: 1px solid #16173a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.detailsButton:hover {
+    color: #fff;
+    border: 1px solid white;
+}
