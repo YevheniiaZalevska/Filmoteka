@@ -30,7 +30,7 @@ const MovieCast = () => {
               src={
                 actor.profile_path
                   ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
-                  : 'https://via.placeholder.com/80' // Заглушка, если нет фото
+                  : 'https://via.placeholder.com/80' 
               }
               alt={actor.name}
               className={styles.castImage}
