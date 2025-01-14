@@ -33,7 +33,7 @@ const MovieReviews = () => {
         <ul className={styles.reviewList}>
           {reviews.map((review) => {
             const isExpanded = expandedReview === review.id;
-            const preview = review.content.slice(0, 150); // Показываем первые 150 символов
+            const preview = review.content.slice(0, 150); 
             const fullContent = review.content;
 
             return (
