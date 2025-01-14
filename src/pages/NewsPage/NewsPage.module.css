@@ -7,9 +7,15 @@
 
 .title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 30px;
     margin-bottom: 20px;
     color: #16173a;
+}
+
+@media screen and (max-width: 650px) {
+    .title {
+        font-size: 23px;
+    }
 }
 
 .form {
@@ -65,9 +71,21 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 650px) {
+    .newsItem a {
+        font-size: 15px;
+    }
+}
+
 .newsItem h2 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #16173a;
+}
+
+@media screen and (max-width: 650px) {
+    .newsItem h2 {
+        font-size: 17px;
+    }
 }
 
 .newsItem p {
@@ -77,8 +95,9 @@
 }
 
 .error {
-    color: red;
+    color: rgb(177, 17, 17);
     font-size: 1rem;
     margin-top: 20px;
     text-align: center;
+    font-weight: bold;
 }
