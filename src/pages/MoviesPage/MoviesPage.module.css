@@ -67,6 +67,72 @@
     font-size: 2.5rem;
     margin-top: 0px;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+    .text {
+        font-size: 23px;
+    }
+}
+
+.randomButton {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #16173a;
+    background-color: transparent;
+    border: 1px solid #16173a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.randomButton:hover {
+    color: #fff;
+    border: 1px solid white;
+}
+
+.randomMovie {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.randomMovie img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.randomMovie h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.randomMovie p {
+    font-size: 1rem;
+}
+
+.movieLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #16173a;
+    background-color: transparent;
+    border: 1px solid #16173a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.movieLink:hover {
+    border-color: #fff;
+    color: #fff;
 }
