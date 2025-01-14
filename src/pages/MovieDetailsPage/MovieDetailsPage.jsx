@@ -27,7 +27,6 @@ const MovieDetailsPage = () => {
 
  return (
     <div className={styles.container}>
-      <div className={styles.overlay}></div>
       <button onClick={() => navigate(-1)} className={styles.but_mdp}>
         Go back
       </button>
