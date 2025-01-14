@@ -136,3 +136,32 @@
     border-color: #fff;
     color: #fff;
 }
+
+.noMoviesText {
+    color: rgb(177, 17, 17);
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 300px;
+    background-color: #fff;
+    z-index: 10;
+    position: absolute;
+}
+
+.suggestionItem {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestionItem:hover {
+    background-color: #f0f0f0;
+}
