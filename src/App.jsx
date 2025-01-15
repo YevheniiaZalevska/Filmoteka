@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import MoviesPage from './pages/MoviesPage/MoviesPage';
 import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
@@ -10,9 +10,14 @@ import MovieReviews from './components/MovieReviews/MovieReviews';
 import Navigation from './components/Navigation/Navigation';
 
 const App = () => {
+  const location = useLocation();
+
+  // Проверка: скрыть навигацию, если пользователь на MovieDetailsPage
+  const isMovieDetailsPage = location.pathname.startsWith('/movies/') && location.pathname !== '/movies';
+
   return (
     <>
-      <Navigation />
+      {!isMovieDetailsPage && <Navigation />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
@@ -29,3 +34,4 @@ const App = () => {
 };
 
 export default App;
+
